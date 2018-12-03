@@ -2,25 +2,41 @@
 
 This is a simple demo server for exercising API Protection. It will:
 
-respond to HTTP Requests
+* respond to HTTP Requests with information about the request
 
-respond to DNS requests
+* respond to DNS requests
+
+
 
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-git clone https://github.com/lucaspnw/api-protection-demo.git
 
-...
-Edit configuration in package.json
-...
+Grab the package
+
+```
+git clone https://github.com/lucaspnw/api-protection-demo.git
+```
+
+Install the prerequisites
+
+```
+cd api-protection-demo
+npm -i
+```
+
+Edit the configuration
+
+```
+vi package.json
+```
 
 Then run the server:
 
-...
+```
 nodejs server.js
-...
+```
 
 Then watch the logs
 
@@ -28,11 +44,8 @@ Then watch the logs
 
 ### Prerequisites
 
-To use this, get a linux box that is routeable to your running API Protection system. 
+To use this, get a linux box that is routeable to your running API Protection system. Mac will probably also work but I didn't test it.
 
-```
-Mac will probably also work.
-```
 
 ## Built With
 

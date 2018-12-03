@@ -12,7 +12,7 @@ dnsserver.zone('example.com', 'ns1.example.com', 'us@example.com', 'now', '2h', 
       .listen(pkg.config.dns_listen_port, pkg.config.dns_listen_address)
  
 function dnshandler(req, res) {
-	  console.log('%s:%s/%s %j', req.connection.remoteAddress, req.connection.remotePort, req.connection.type, req)
+	  console.log('DNS FROM: %s:%s/%s %j', req.connection.remoteAddress, req.connection.remotePort, req.connection.type, req)
 	 
 	  var question = res.question[0]
 	    , hostname = question.name
@@ -32,6 +32,8 @@ http.createServer(httphandler)
 	.listen(pkg.config.http_listen_port);
 	
 function httphandler(req, res) {
+	console.log('HTTP FROM: %s:%s', req.connection.remoteAddress, req.connection.remotePort)
+
 
 	if(typeof req.headers.authorization === 'string') {
 		var auth = authorization.parse(req.headers.authorization);
@@ -50,15 +52,12 @@ function httphandler(req, res) {
 				auth.bearer_decode_error = JSON.stringify(e.message);
 				
 			}
-			console.log(typeof auth.bearer_decoded);
 		}
 
 	} else {
 		var auth = { scheme: 'NONE' }
 	}
 
-	//console.log(auth);
-	//console.log(req);
 
 	res.write('<pre>\n<b>Howdy!</b>\n\nYour Request Details:\n\t' + req.method + ' ' + req.url  + '\nYour Source IP:' + req.connection.remoteAddress + "\nHeaders:\n" + JSON.stringify(req.headers,null,'\t') + "\nAuthorization data I can decode:\n" + JSON.stringify(auth,null,"\t") + '\n</pre>\n'); //write a response to the client
   res.end(); //end the response

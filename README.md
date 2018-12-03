@@ -6,6 +6,7 @@ This is a simple demo server for exercising API Protection. It will:
 
 * respond to DNS requests
 
+It tries to decode the authorization header information in the request, including JWT / Bearer token. This allows you to fiddle around with SSO configurations and see the result easily, because you know for sure that the request got to the server.
 
 
 ## Getting Started

@@ -1,21 +1,20 @@
 {
-	  "name": "api_protection_demo",
-	  "version": "1.0.0",
-	  "dependencies": {
-		      "dnsd": "0.9.6"
-	  },
-	  "config": {
-		  "dns_listen_port": "5353",
-		  "dns_listen_address": "0.0.0.0",
-		  "dns_resolve_to": "192.168.1.19",
-		  "http_listen_port": "8383",
-		  "http_listen_address": "0.0.0.0"
-	  },
-	  "description": "demo for API Protection",
-	  "license": "MIT",
-	  "repository": "github:lucaspnw/api_protection_demo"
-
-	  
-
-
+  "name": "api_protection_demo",
+  "version": "1.0.0",
+  "dependencies": {
+    "auth-header": "1.0.0",
+    "dnsd": "0.9.6",
+    "jwt-decode": "^2.2.0",
+    "parse-bearer-token": "^1.0.0"
+  },
+  "config": {
+    "dns_listen_port": "5353",
+    "dns_listen_address": "0.0.0.0",
+    "dns_resolve_to": "192.168.1.19",
+    "http_listen_port": "8383",
+    "http_listen_address": "0.0.0.0"
+  },
+  "description": "demo for API Protection",
+  "license": "MIT",
+  "repository": "github:lucaspnw/api_protection_demo"
 }

@@ -1,6 +1,6 @@
-#!/usr/bin/nodejs
 
-var dnsd = require('dnsd')
+
+var dnsd = require('dnsd');
 var http = require('http');
 var pkg = require('./package.json');
 var authorization = require('auth-header');

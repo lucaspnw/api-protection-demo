@@ -43,6 +43,10 @@ Then run the server:
 ```
 nodejs server.js
 ```
+or
+```
+node server.js
+```
 
 Then watch the logs
 

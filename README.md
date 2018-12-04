@@ -24,7 +24,7 @@ Install the prerequisites
 
 ```
 cd api-protection-demo
-npm -i
+npm install
 ```
 
 Mac users will need to install Node. Eg: 

@@ -27,6 +27,11 @@ cd api-protection-demo
 npm -i
 ```
 
+Mac users will need to install Node. Eg: 
+```
+brew install node
+```
+
 Edit the configuration to define the listening ports. Use non-privileged ones for simplicity.
 
 ```

@@ -27,7 +27,7 @@ cd api-protection-demo
 npm -i
 ```
 
-Edit the configuration
+Edit the configuration to define the listening ports. Use non-privileged ones for simplicity.
 
 ```
 vi package.json
@@ -41,7 +41,11 @@ nodejs server.js
 
 Then watch the logs
 
- 
+ ```
+DNS Server running at 0.0.0.0:5353
+HTTP Server running at 0.0.0.0:8383
+DNS will resolve everything to: 192.168.1.19
+```
 
 ### Prerequisites
 

@@ -59,6 +59,11 @@ DNS will resolve everything to: 192.168.1.19
 ### Prerequisites
 
 To use this, get a linux box that is routeable to your running API Protection system. Mac will probably also work but I didn't test it.
+Alpine Linux users must add node, etc:
+```
+apk add --update nodejs nodejs-npm bash git
+```
+
 
 
 ## Built With
